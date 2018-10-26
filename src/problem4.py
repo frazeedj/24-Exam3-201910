@@ -86,15 +86,20 @@ And this one for n=14:
 
     for k in range(n):
         for j in range(n-k-1):
-            print(end='')
-        if k < 9:
-            for j in range(k+1):
-                print(j+1, end='')
-            if k < 8:
-                print('')
-        if k > 8:
-            for j in range(k-9):
-                print(j, end='')
+            print(end=' ')
+        for j in range(k+1):
+            if j < 9:
+                print(j+1,end='')
+        for j in range(k+1):
+            if j > 8:
+                print(j-9,end='')
+        for j in range(1):
+            print(end=' ')
+        for j in range(k+2):
+            print('*',end='')
+        print(end=' ')
+        print('')
+
 
 
 # ----------------------------------------------------------------------
