@@ -2,8 +2,8 @@
 Exam 3, problem 3.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October, 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Dylan Frazee.  October, 2018.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 
@@ -227,6 +227,12 @@ def problem3(seq_of_seq):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
+    for k in range(len(seq_of_seq)):
+        p = seq_of_seq[k]
+        for j in range(len(p)):
+            if is_prime(p[j]) is True:
+                return p
+    return -1
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
